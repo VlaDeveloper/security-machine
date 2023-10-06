@@ -1,0 +1,222 @@
+/* USER VARIABLES SECTION */
+
+:root {
+	--accent: #546DE5;
+	--text: #fff;
+	--dark: #222;
+	--regular-text: 16px;
+	--lineheight: 1.65;
+	--userfont: open-sans-sec, sans-serif;
+	--systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+}
+
+/* BOOTSTRAP SETTINGS SECTION */
+
+/* gutter 20px (10px + 10px). Comment this code for default gutter start at 1.5rem (24px) wide. */
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl { --bs-gutter-x: .625rem; }
+.row, .row > * { --bs-gutter-x: 1.25rem; }
+
+/* FONTS LOAD SECTION */
+
+@font-face { src: url("../fonts/OpenSans-Regular.woff2") format("woff2"); font-family: "open-sans-sec"; font-weight: 400; font-style: normal; }
+@font-face { src: url("../fonts/OpenSans-Light.woff2") format("woff2"); font-family: "open-sans-sec"; font-weight: 300; font-style: normal; }
+@font-face { src: url("../fonts/OpenSans-SemiBold.woff2") format("woff2"); font-family: "open-sans-sec"; font-weight: 600; font-style: normal; }
+@font-face { src: url("../fonts/OpenSans-Bold.woff2") format("woff2"); font-family: "open-sans-sec"; font-weight: 700; font-style: normal; }
+
+/* @font-face { src: url("../fonts/roboto-regular-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 400; font-style: normal; }
+@font-face { src: url("../fonts/roboto-italic-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 400; font-style: italic; }
+@font-face { src: url("../fonts/roboto-bold-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 700; font-style: normal; }
+@font-face { src: url("../fonts/roboto-bolditalic-webfont.woff2") format("woff2"); font-family: "roboto-st"; font-weight: 700; font-style: italic; } */
+
+/* GENERAL CSS SETTINGS */
+
+::placeholder { color: #666; }
+::selection { background-color: var(--accent); color: #fff; }
+input, textarea { outline: none; }
+input:focus:required:invalid, textarea:focus:required:invalid { border-color: red; }
+input:required:valid, textarea:required:valid { border-color: green; }
+
+body {
+	font-family: var(--userfont);
+	font-size: var(--regular-text);
+	line-height: var(--lineheight);
+	color: var(--text);
+	min-width: 320px;
+	position: relative;
+	overflow-x: hidden;
+}
+
+/* USER STYLES */
+
+.image {
+	max-width: 100%;
+	margin-bottom: var(--bs-gutter-x);
+	border-radius: 4px;
+}
+
+.accent {
+	color: var(--accent);
+	font-weight: bold;
+}
+
+ul,
+li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.btn {
+	display: inline-block;
+	border: none;
+	color: #fff;
+	text-decoration: none;
+	background-image: linear-gradient(180deg, #546DE5 0%, #778BEB 100%);
+	padding: 15px 60px;
+	font-weight: 600;
+	text-align: center;
+	position: relative;
+	outline: none;
+	transition: background-image .1s ease;
+	cursor: pointer;
+}
+
+.btn:focus, 
+.btn:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+.btn:hover {
+	background-image: linear-gradient(360deg, #546DE5 0%, #778BEB 100%);
+}
+		
+
+/* top line */
+.top-line {
+	background-color: var(--accent);
+	padding: 7px 0 8px;
+}
+
+.nav-mnu,
+.nav-mnu ul {
+	height: 100%;
+}
+
+.nav-mnu ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-weight: 600;
+	font-size: 14px;
+}
+
+.nav-mnu li {
+	margin-right: 25px;
+}
+
+.nav-mnu li:last-child {
+	margin-right: 0;
+}
+
+.nav-mnu li a {
+	color: var(--text);
+	text-decoration: none;
+}
+
+/* main section */
+
+.s-main {
+	padding-top: 60px;
+	padding-bottom: 21px;
+	/* bg */
+	background-image: linear-gradient(108deg, #333 0%, rgba(68, 68, 68, 0.95) 61.98%);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	/* height styles */
+	/* height: 100vh;
+	min-height: 800px; */
+}
+
+.sec-item {
+	background-color: var(--dark);
+	padding: 21px 0px 90px;
+}
+
+.sec-item-title {
+	text-align: center;
+	font-weight: bold;
+	font-size: 20px;
+
+	margin-bottom: 26px;
+}
+
+.sec-carousel-item {
+	width: 264px;
+	margin: 0 auto;
+	position: relative;
+}
+
+.sec-carousel .owl-nav {
+	position: absolute;
+	width: 100%;
+	top: 30%;
+	transform: translateY(-30%);
+}
+
+.sec-carousel .owl-nav button.owl-next, 
+.sec-carousel .owl-nav button.owl-prev {
+	width: 35px;
+	height: 56px; 
+	position: absolute;
+}
+
+.sec-carousel .owl-nav button.owl-next path, 
+.sec-carousel .owl-nav button.owl-prev path {
+	fill: #fff;
+	opacity: 0.5;
+	transition: opacity .25s ease-out, fill .25s ease-out;
+}
+
+.sec-carousel .owl-nav button.owl-next:hover path, 
+.sec-carousel .owl-nav button.owl-prev:hover path {
+	fill: var(--accent);
+	opacity: 1;
+}
+
+.sec-carousel .owl-nav button.owl-prev {
+	left: 20px;
+}
+
+.sec-carousel .owl-nav button.owl-next {
+	right: 20px;
+}
+
+.sec-statistic {
+	text-align: center;
+}
+
+.sec-settings {
+	padding-left: 20px;
+}
+
+.sec-settings ul {
+	margin-bottom: 27px;
+}
+
+.sec-settings ul li {
+	background-image: url(../images/cog.svg);
+	background-repeat: no-repeat;
+	background-position: left center;
+	padding-left: 30px;
+	margin-bottom: 12px;
+}
+
+.credits {
+	margin-top: 100px;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 300;
+}
