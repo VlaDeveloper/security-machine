@@ -19,12 +19,15 @@
 
 	<link rel="stylesheet" href="libs/owl.carousel/dist/assets/owl.carousel.min.css">
 
+	<link rel="stylesheet" href="libs/magnific-popup/dist/magnific-popup.css">
+
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
 
 	<script src="libs/jquery/jquery-3.6.0.min.js" defer></script>
 	<script src="libs/equalheight/dist/jquery.equalheight.js" defer></script>
 	<script src="libs/owl.carousel/dist/owl.carousel.min.js" defer></script>
+	<script src="libs/magnific-popup/dist/jquery.magnific-popup.min.js" defer></script>
 
 	<script src="js/common.js" defer></script>
 
@@ -45,11 +48,11 @@
 					<div class="col-lg-8">
 						<nav class="nav-mnu">
 							<ul>
-								<li><a href="#">Пункт 1</a></li>
-								<li><a href="#">Пункт 2</a></li>
-								<li><a href="#">Пункт 3</a></li>
-								<li><a href="#">Пункт 4</a></li>
-								<li><a href="#">Пункт 5</a></li>
+								<li><a href="#">Анализ</a></li>
+								<li><a href="#">Параметры</a></li>
+								<li><a href="#">Состояние</a></li>
+								<li><a href="#">Просмотр</a></li>
+								<li><a href="#">Ошибки</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -70,13 +73,37 @@
 							</h3>
 							<div class="sec-carousel owl-carousel">
 								<div class="sec-carousel-item">
-									<img src="images/stanok.jpg" alt="Станок">
+									<a href="#" class="sec-carousel-link"><img src="images/stanok.jpg" alt="Станок"></a>
+									<div class="sec-carousel-text">Станок</div>
+									<div class="hidden">
+										<div class="sec-carousel-popup general-popup">
+											<h2 class="general-popup-title">Станок</h2>
+											<img src="images/stanok-big.jpg" alt="Станок">
+											<div class="sec-carousel-popup-text">Разрешение: 609x420</div>
+										</div>
+									</div>
 								</div>
 								<div class="sec-carousel-item">
-									<img src="images/stanok.jpg" alt="Станок">
+									<a href="#" class="sec-carousel-link"><img src="images/stanok.jpg" alt="Станок"></a>
+									<div class="sec-carousel-text">Станок 2</div>
+									<div class="hidden">
+										<div class="sec-carousel-popup general-popup">
+											<h2 class="general-popup-title">Станок 2</h2>
+											<img src="images/stanok-big.jpg" alt="Станок">
+											<div class="sec-carousel-popup-text">Разрешение: 609x420</div>
+										</div>
+									</div>
 								</div>
 								<div class="sec-carousel-item">
-									<img src="images/stanok.jpg" alt="Станок">
+									<a href="#" class="sec-carousel-link"><img src="images/stanok.jpg" alt="Станок"></a>
+									<div class="sec-carousel-text">Станок 3</div>
+									<div class="hidden">
+										<div class="sec-carousel-popup general-popup">
+											<h2 class="general-popup-title">Станок 3</h2>
+											<img src="images/stanok-big.jpg" alt="Станок">
+											<div class="sec-carousel-popup-text">Разрешение: 609x420</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -104,13 +131,15 @@
 							</h3>
 							<div class="sec-settings">
 								<ul>
-									<li>Настройка 1</li>
-									<li>Настройка 2</li>
-									<li>Настройка 3</li>
-									<li>Настройка 4</li>
-									<li>Настройка 5</li>
+									<li>Разрешение</li>
+									<li>Слои</li>
+									<li>Обучение</li>
+									<li>Сброс</li>
+									<li>Инструкция</li>
 								</ul>
-								<button class="btn sec-settings-btn">Настроить</button>
+								<div class="btn-wrapper">
+									<button class="btn sec-settings-btn">Настроить</button>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -120,9 +149,25 @@
 		<div class="credits">
 			<div class="container">
 				<div class="row">
-					<div class="col-12">
-						2023 © Чирков Владислав, Вадим Шепелев, Егор Пономарёв<br>
-						info@vladchirkov.ru, vadimblin258@gmail.com, egor.ponomaryov2002@gmail.com
+					<div class="col-lg-4">
+						2023 © Вадим Шепелев, Егор Пономарёв<br>
+						vadimblin258@gmail.com, egor.ponomaryov2002@gmail.com
+					</div>
+					<div class="col-lg-8">
+						<div class="credits-soc">
+							<a href="#" target="_blank" class="soc-item">
+								<img src="images/soc/vk.png" alt="vk">
+							</a>
+							<a href="#" target="_blank" class="soc-item">
+								<img src="images/soc/telegram.png" alt="telegram">
+							</a>
+							<a href="#" target="_blank" class="soc-item">
+								<img src="images/soc/viber.png" alt="viber">
+							</a>
+							<a href="#" target="_blank" class="soc-item">
+								<img src="images/soc/facebook.png" alt="facebook">
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>
