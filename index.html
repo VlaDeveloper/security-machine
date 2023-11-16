@@ -29,6 +29,8 @@
 	<script src="libs/owl.carousel/dist/owl.carousel.min.js" defer></script>
 	<script src="libs/magnific-popup/dist/jquery.magnific-popup.min.js" defer></script>
 
+	<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+
 	<script src="js/common.js" defer></script>
 
 </head>
@@ -116,9 +118,16 @@
 							<h3 class="sec-item-title">
 								Статистика
 							</h3>
-							<div class="sec-statistic">
+							<a href="#stat-popup" class="sec-statistic">
+								<!-- <canvas id="myChart"></canvas> -->
 								<img src="images/stat.png" alt="Статистика">
-							</div>
+							</a>
+						</div>
+					</div>
+					<div class="hidden">
+						<div id="stat-popup" class="sec-statistic-popup general-popup">
+							<h2 class="general-popup-title">Статистика</h2>
+							<img src="images/stat.png" alt="Статистика">
 						</div>
 					</div>
 				</div>
@@ -138,7 +147,22 @@
 									<li>Инструкция</li>
 								</ul>
 								<div class="btn-wrapper">
-									<button class="btn sec-settings-btn">Настроить</button>
+									<a href="#settings-popup" class="btn sec-settings-btn">Настроить</a>
+								</div>
+							</div>
+						</div>
+						<div class="hidden">
+							<div id="settings-popup" class="sec-settings-popup general-popup">
+								<h2 class="general-popup-title">Настройки</h2>
+								<!-- <img src="images/stat.png" alt="Статистика"> -->
+								<div class="sec-settings">
+									<ul>
+										<li>Разрешение</li>
+										<li>Слои</li>
+										<li>Обучение</li>
+										<li>Сброс</li>
+										<li>Инструкция</li>
+									</ul>
 								</div>
 							</div>
 						</div>
@@ -146,6 +170,9 @@
 				</div>
 			</div>
 		</div>
+	</section>
+
+	<footer class="main-footer">
 		<div class="credits">
 			<div class="container">
 				<div class="row">
@@ -172,7 +199,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</footer>
 
 </body>
 </html>

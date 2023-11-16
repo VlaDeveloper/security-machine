@@ -177,8 +177,8 @@ li {
 /* main section */
 
 .s-main {
-	padding-top: 160px;
-	padding-bottom: 21px;
+	padding-top: 140px;
+	/* padding-bottom: 21px; */
 	/* bg */
 	/* background-image: linear-gradient(108deg, #333 0%, rgba(68, 68, 68, 0.95) 61.98%); */
 	background-repeat: no-repeat;
@@ -257,6 +257,7 @@ li {
 
 .sec-statistic {
 	text-align: center;
+	display: block;
 }
 
 .sec-settings {
@@ -288,8 +289,16 @@ li {
 	bottom: -110px; */
 }
 
+.sec-settings-popup ul {
+	text-align: left;
+}
+
+.main-footer {
+	margin-top: 75px;
+	padding-bottom: 10px;
+}
+
 .credits {
-	margin-top: 100px;
 	color: var(--light-text);
 	font-size: 14px;
 	font-weight: 300;
@@ -303,7 +312,7 @@ li {
 	opacity: 0.2;
 	background: #000;
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 
 .credits-soc {
