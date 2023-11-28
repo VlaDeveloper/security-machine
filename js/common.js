@@ -1,6 +1,35 @@
 // $('body').hide()
 $(function () {
 	
+	// Внедряем статистику
+	function renderChart() {
+		const ctx = document.getElementById('myChart');
+
+		const cfg = {
+			type: 'pie',
+			data: {
+				datasets: [{
+					data: [{id: 'Detections', nested: {value: 10}}, {id: 'Errors', nested: {value: 20}}, {id: 'Undefined', nested: {value: 15}}]
+				}],
+				labels: ['Обнаружений', 'Ошибок', 'Не определено']
+			},
+			options: {
+				parsing: {
+					key: 'nested.value'
+				}
+			}
+		}
+		
+		
+		const ctx2 = document.getElementById('myChartPop');
+		
+
+		new Chart(ctx, cfg);
+		new Chart(ctx2, cfg);
+	}
+
+	renderChart()
+
 	$(window).scroll(function(){
 		if($(window).scrollTop() > 50){
 				$('.top-line').addClass('active');
@@ -37,28 +66,6 @@ $(function () {
 	$(window).resize(function () {
 		makeEqual()
 	})
-
-	// Внедряем статистику
-  // const ctx = document.getElementById('myChart');
-
-  // new Chart(ctx, {
-  //   type: 'bar',
-  //   data: {
-  //     labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-  //     datasets: [{
-  //       label: '# of Votes',
-  //       data: [12, 19, 3, 5, 2, 3],
-  //       borderWidth: 1
-  //     }]
-  //   },
-  //   options: {
-  //     scales: {
-  //       y: {
-  //         beginAtZero: true
-  //       }
-  //     }
-  //   }
-  // });
 
 
 })

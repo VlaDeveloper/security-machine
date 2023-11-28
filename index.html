@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<!-- <base href="/"> -->
 
-	<title>Simple Starter</title>
+	<title>Интернет-приложение</title>
 	<meta name="description" content="Simple Starter Description">
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -71,7 +71,7 @@
 					<div class="sec-item">
 						<div class="sec-inner">
 							<h3 class="sec-item-title">
-								Изображения
+								Камера
 							</h3>
 							<div class="sec-carousel owl-carousel">
 								<div class="sec-carousel-item">
@@ -119,15 +119,18 @@
 								Статистика
 							</h3>
 							<a href="#stat-popup" class="sec-statistic">
-								<!-- <canvas id="myChart"></canvas> -->
-								<img src="images/stat.png" alt="Статистика">
+								<canvas id="myChart"></canvas>
+								<!-- <img src="images/stat.png" alt="Статистика"> -->
 							</a>
 						</div>
 					</div>
 					<div class="hidden">
 						<div id="stat-popup" class="sec-statistic-popup general-popup">
 							<h2 class="general-popup-title">Статистика</h2>
-							<img src="images/stat.png" alt="Статистика">
+							<!-- <img src="images/stat.png" alt="Статистика"> -->
+							<div class="sec-statistic-popchart">
+								<canvas id="myChartPop"></canvas>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -147,7 +150,7 @@
 									<li>Инструкция</li>
 								</ul>
 								<div class="btn-wrapper">
-									<a href="#settings-popup" class="btn sec-settings-btn">Настроить</a>
+									<a href="#settings-popup" class="btn sec-settings-btn">Открыть</a>
 								</div>
 							</div>
 						</div>

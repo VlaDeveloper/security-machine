@@ -258,7 +258,23 @@ li {
 .sec-statistic {
 	text-align: center;
 	display: block;
+	max-width: 60%;
+	/* width: 250px; */
+	margin: 0 auto;
 }
+
+.sec-statistic canvas {
+	margin: 0 auto;
+}
+
+.sec-statistic-popchart {
+	width: 60%;
+	margin: 0 auto;
+}
+
+/* .sec-statistic-popchart canvas {
+	margin: 0 auto;
+} */
 
 .sec-settings {
 	/* padding-left: 20px; */
