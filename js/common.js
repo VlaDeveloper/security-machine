@@ -42,12 +42,23 @@ $(function () {
 		items: 1,
 		dots: false,
 		nav: true,
-		navText: ['<img class="img-svg" src="images/angle-left-solid.svg" alt="Left">','<img class="img-svg" src="images/angle-right-solid.svg" alt="Right">']
+		navText: ['<img class="img-svg" src="images/angle-left-solid.svg" alt="Left">','<img class="img-svg" src="images/angle-right-solid.svg" alt="Right">'],
+		responsive:{
+			0:{
+				nav:false,
+				dots: true
+			},
+			992:{
+					// nav:false
+			}
+	}
 	});
 	
 	$("img.img-svg").each(function(){var t=$(this),r=t.attr("id"),a=t.attr("class"),e=t.attr("src");$.get(e,function(e){var i=$(e).find("svg");void 0!==r&&(i=i.attr("id",r)),void 0!==a&&(i=i.attr("class",a+" replaced-svg")),!(i=i.removeAttr("xmlns:a")).attr("viewBox")&&i.attr("height")&&i.attr("width")&&i.attr("viewBox","0 0 "+i.attr("height")+" "+i.attr("width")),t.replaceWith(i)},"xml")});
 
 	$('.sec-carousel-item').each(function(e){
+		console.log(e);
+		$(this).attr('data-num', `${e+1}/${$('.sec-carousel-item').length}`)
 		$(this).find('.sec-carousel-link').attr('href', '#sec-carousel-popup-' + e);
 		$(this).find('.sec-carousel-popup').attr('id', 'sec-carousel-popup-' + e);
 	});

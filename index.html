@@ -21,6 +21,8 @@
 
 	<link rel="stylesheet" href="libs/magnific-popup/dist/magnific-popup.css">
 
+	<link rel="stylesheet" href="libs/css-hamburgers/dist/hamburgers.min.css">
+
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="css/media.css">
 
@@ -41,13 +43,14 @@
 		<!-- .top-line -->
 		<div class="top-line">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-2">
+				<div class="row align-items-center">
+					<!-- desktop elements START -->
+					<div class="col-lg-2 d-md-none d-lg-block">
 						<a href="/" class="logo">
 							<img src="images/logo.svg" alt="Logo">
 						</a>
 					</div>
-					<div class="col-lg-8">
+					<div class="col-lg-8 d-md-none d-lg-block">
 						<nav class="nav-mnu">
 							<ul>
 								<li><a href="#">Анализ</a></li>
@@ -58,6 +61,21 @@
 							</ul>
 						</nav>
 					</div>
+					<!-- desktop elements END -->
+					<!-- mobile elements START -->
+					<div class="col-md-2 d-lg-none">
+						<div class="toggle-mnu">
+							<button class="hamburger" type="button">
+								<span class="hamburger-box">
+									<span class="hamburger-inner"></span>
+								</span>
+							</button>
+						</div>
+					</div>
+					<div class="col-md-8 d-lg-none">
+						<div class="top-title">Главная</div>
+					</div>
+					<!-- mobile elements END -->
 				</div>
 			</div>
 		</div>
@@ -65,9 +83,9 @@
 
 	<section class="s-main">
 		<div class="container">
-			<div class="row">
+			<div class="row justify-content-center">
 				<!-- .col-lg-4 -->
-				<div class="col-lg-4">
+				<div class="col-xl-4 col-lg-5 col-md-10">
 					<div class="sec-item">
 						<div class="sec-inner">
 							<h3 class="sec-item-title">
@@ -112,7 +130,7 @@
 					</div>
 				</div>
 				<!-- .col-lg-4 -->
-				<div class="col-lg-4">
+				<div class="col-xl-4 col-lg-5 col-md-10">
 					<div class="sec-item">
 						<div class="sec-inner">
 							<h3 class="sec-item-title">
@@ -135,7 +153,7 @@
 					</div>
 				</div>
 				<!-- .col-lg-4 -->
-				<div class="col-lg-4">
+				<div class="col-xl-4 col-lg-5 col-md-10">
 					<div class="sec-item">
 						<div class="sec-inner">
 							<h3 class="sec-item-title">
@@ -179,11 +197,11 @@
 		<div class="credits">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-4">
+					<div class="col-lg-6 col-12 order-1 order-lg-0">
 						2023 © Вадим Шепелев, Егор Пономарёв<br>
 						vadimblin258@gmail.com, egor.ponomaryov2002@gmail.com
 					</div>
-					<div class="col-lg-8">
+					<div class="col-lg-6 col-12 order-0 order-lg-1">
 						<div class="credits-soc">
 							<a href="#" target="_blank" class="soc-item">
 								<img src="images/soc/vk.png" alt="vk">
