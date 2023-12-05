@@ -31,7 +31,7 @@
 	<script src="libs/owl.carousel/dist/owl.carousel.min.js" defer></script>
 	<script src="libs/magnific-popup/dist/jquery.magnific-popup.min.js" defer></script>
 
-	<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+	<script src="libs/chart/chart.umd.min.js" defer></script>
 
 	<script src="js/common.js" defer></script>
 
@@ -45,12 +45,12 @@
 			<div class="container">
 				<div class="row align-items-center">
 					<!-- desktop elements START -->
-					<div class="col-lg-2 d-md-none d-lg-block">
+					<div class="col-lg-2 d-none d-lg-block">
 						<a href="/" class="logo">
 							<img src="images/logo.svg" alt="Logo">
 						</a>
 					</div>
-					<div class="col-lg-8 d-md-none d-lg-block">
+					<div class="col-lg-8 d-none d-lg-block">
 						<nav class="nav-mnu">
 							<ul>
 								<li><a href="#">Анализ</a></li>
@@ -63,22 +63,49 @@
 					</div>
 					<!-- desktop elements END -->
 					<!-- mobile elements START -->
-					<div class="col-md-2 d-lg-none">
+					<div class="col-md-2 col-sm-3 col-3 d-lg-none">
 						<div class="toggle-mnu">
-							<button class="hamburger" type="button">
+							<button class="hamburger hamburger--arrow" type="button">
 								<span class="hamburger-box">
 									<span class="hamburger-inner"></span>
 								</span>
 							</button>
 						</div>
 					</div>
-					<div class="col-md-8 d-lg-none">
+					<div class="col-md-8 col-sm-6 col-6 d-lg-none">
 						<div class="top-title">Главная</div>
 					</div>
 					<!-- mobile elements END -->
 				</div>
 			</div>
 		</div>
+
+			<nav class="nav-mnu nav-mobile">
+				<div class="nav-mobile-top">
+					<img class="nav-mobile-logo" src="images/logo.svg" alt="Лого">
+					<div class="nav-mobile-title">АСУБП</div>
+					<div class="toggle-mnu toggle-mnu-mobile">
+						<button class="hamburger hamburger--arrow is-active" type="button">
+							<span class="hamburger-box">
+								<span class="hamburger-inner"></span>
+							</span>
+						</button>
+					</div>
+				</div>
+				<ul>
+					<li><a href="#"><img src="images/menu/1.svg" alt=""> Анализ</a></li>
+					<li><a href="#"><img src="images/menu/2.svg" alt=""> Параметры</a></li>
+					<li><a href="#"><img src="images/menu/3.svg" alt=""> Состояние</a></li>
+					<li><a href="#"><img src="images/menu/4.svg" alt=""> Просмотр</a></li>
+					<li><a href="#"><img src="images/menu/5.svg" alt=""> Ошибки</a></li>
+
+					<!-- <li class="nav-mobile-help"><a href="#"><img src="images/menu/6v2.svg" alt=""> Справка</a></li> -->
+				</ul>
+				<div class="nav-mobile-help">
+					<a href="#"><img src="images/menu/6v2.svg" alt=""> Справка</a>
+				</div>
+			</nav>
+
 	</header>
 
 	<section class="s-main">

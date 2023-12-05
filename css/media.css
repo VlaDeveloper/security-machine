@@ -29,7 +29,134 @@
 		z-index: 2;
 		top: 3px;
 	}
+
+	/* .active-menu */
+	body.active-menu {
+		overflow-y: hidden;
+	}
+	body.active-menu::before {
+		content: '';
+		display: block;
+		position: absolute;
+		inset: 0;
+		background-color: #000;
+		opacity: 0.5;
+		z-index: 1000;
+	}
+
+	.nav-mobile {
+		display: block;
+		position: fixed;
+		width: 639px;
+		height: 100%;
+		top: 0;
+		/* left: 0; */
+		left: -200%;
+		z-index: 1001;
+		background-color: #fff;
+		overflow-y: scroll;
+		transition: left .25s ease;
+	}
+
+	.nav-mobile.active {
+		left: 0;
+	}
+
+	.nav-mobile-top {
+		background-color: var(--accent);
+		display: flex;
+		align-items: center;
+		height: 145px;
+		padding-left: 38px;
+		color: #fff;
+		box-shadow: 0px 10px 4px 0px rgba(0, 0, 0, 0.25);
+		position: relative;
+	}
+
+	.toggle-mnu-mobile {
+		position: absolute;
+    right: 38px;
+    height: auto;
+    top: 50%;
+		transform: translateY(-50%);
+	}
+
+	.nav-mobile-logo {
+		width: 74px;
+		margin-right: 50px;
+	}
+
+	.nav-mobile-title {
+		font-size: 48px;
+		font-weight: bold;
+	}
 	
+	.nav-mobile ul {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		margin-top: 48px;
+		/* padding-left: 54px;
+		font-size: 60px; */
+		font-weight: bold;
+		position: relative;
+		height: auto;
+		padding-bottom: 52px;
+	}
+
+	.nav-mobile ul,
+	.nav-mobile-help {
+		padding-left: 54px;
+		font-size: 60px;
+		font-weight: bold;
+	}
+
+	.nav-mobile ul::after {
+		content: '';
+		display: block;
+		height: 1px;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		background-color: #000;
+	}
+
+	.nav-mobile li {
+		margin-bottom: 5px;
+		margin-right: 0;
+	}
+
+	.nav-mobile li a,
+	.nav-mobile-help a {
+		color: #49434d;
+		display: flex;
+		align-items: center;
+		padding: 34px 30px;
+		width: 531px;
+		border-radius: 20px;
+		transition: background-color .25s ease;
+	}
+
+	.nav-mobile li a:hover,
+	.nav-mobile-help a:hover {
+		background-color: #BFD5FF;
+	}
+
+	.nav-mobile li a img,
+	.nav-mobile-help a img {
+		margin-right: 20px;
+	}
+
+	.nav-mobile-help {
+		margin-top: 82px;
+		/* margin-top: 144px; */
+	}
+
+	.nav-mobile-help a {
+		margin-bottom: 30px;
+		text-decoration: none;
+	}
 
 	.hamburger {
 		outline: none !important;
@@ -50,8 +177,8 @@
 	.sec-item {
 		padding: 27px 0px 28px;
 	}
-
-	.sec-carousel-item::before {
+	/* .sec-carousel-item::before */
+	.sec-carousel-link::before {
 		content: attr(data-num);
 		position: absolute;
 		top: 16px;
@@ -113,12 +240,97 @@
 
 /* sm <= Medium (md) */
 @media (max-width : 768px) {
-	
+	.nav-mobile {
+		width: 100%;
+	}
+	.toggle-mnu-mobile {
+		position: absolute;
+		right: 18px;
+		height: auto;
+	}
+	.nav-mobile-help {
+		display: flex;
+		justify-content: center;
+	}
+	.nav-mobile ul, 
+	.nav-mobile-help {
+		padding-left: 0;
+	}
+	.nav-mobile ul {
+		align-items: center;
+	}
+	.nav-mobile li,
+	.nav-mobile-help {
+		width: 95%;
+	}
+	.nav-mobile-help {
+		margin: 0 auto;
+		margin-top: 82px;
+	}
+	.nav-mobile li a, 
+	.nav-mobile-help a {
+		width: 100%;
+	}
+	.general-popup {
+		width: 100%;
+	}
+	.general-popup img {
+		width: 100%;
+	}
+	.main-footer {
+    padding-bottom: 27px;
+  }
+	.credits-soc {
+		margin-bottom: 17px;
+	}
+	.credits::before {
+    margin-bottom: 27px;
+  }
 }
 
 /* xs <= Small (sm) */
 @media (max-width : 576px) {
-
+	.nav-mobile-top {
+		padding-left: 5px;
+	}
+	.nav-mobile-logo {
+    width: 64px;
+    margin-right: 12px;
+  }
+	.nav-mobile-title {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+	.toggle-mnu-mobile {
+    right: 0px;
+  }
+	.nav-mobile ul, .nav-mobile-help {
+    font-size: 30px;
+    /* padding: 0 10px; */
+  }
+	.nav-mobile li, .nav-mobile-help {
+    width: 100%;
+  }
+	.nav-mobile li a img, .nav-mobile-help a img {
+    margin-right: 15px;
+  }
+	.nav-mobile li, .nav-mobile-help,
+	.nav-mobile li a, .nav-mobile-help a {
+		width: 280px;
+	}
+	.nav-mobile li a, .nav-mobile-help a {
+		padding: 34px 20px;
+	}
+	.sec-carousel-item {
+		width: 90%;
+	}
+	.sec-carousel-link {
+		width: 90%;
+	}
+	.sec-settings .btn-wrapper {
+		bottom: 0;
+	}
 }
 
 

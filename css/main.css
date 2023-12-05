@@ -147,6 +147,10 @@ li {
 	left: 0;
 }
 
+.nav-mobile {
+	display: none;
+}
+
 .nav-mnu,
 .nav-mnu ul {
 	height: 100%;

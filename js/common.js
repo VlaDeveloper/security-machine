@@ -1,6 +1,17 @@
 // $('body').hide()
 $(function () {
 	
+	$('.toggle-mnu').on('click', function() {
+		// $(this).find('button').toggleClass('is-active')
+		$('.nav-mobile').toggleClass('active')
+		$('body').toggleClass('active-menu')
+		// $('.hidden-mnu').slideToggle(function(){
+		// 	if($(this).css('display') == 'none'){
+		// 		$(this).removeAttr('style');
+		// 	}
+		// });
+	});
+
 	// Внедряем статистику
 	function renderChart() {
 		const ctx = document.getElementById('myChart');
@@ -58,7 +69,8 @@ $(function () {
 
 	$('.sec-carousel-item').each(function(e){
 		console.log(e);
-		$(this).attr('data-num', `${e+1}/${$('.sec-carousel-item').length}`)
+		// $(this).attr('data-num', `${e+1}/${$('.sec-carousel-item').length}`)
+		$(this).find('a').attr('data-num', `${e+1}/${$('.sec-carousel-item').length}`)
 		$(this).find('.sec-carousel-link').attr('href', '#sec-carousel-popup-' + e);
 		$(this).find('.sec-carousel-popup').attr('id', 'sec-carousel-popup-' + e);
 	});
