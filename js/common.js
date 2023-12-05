@@ -16,6 +16,10 @@ $(function () {
 	function renderChart() {
 		const ctx = document.getElementById('myChart');
 
+		if (!ctx) {
+			return
+		}
+
 		const cfg = {
 			type: 'pie',
 			data: {
@@ -84,11 +88,36 @@ $(function () {
 		$('.sec-inner').height('auto').equalHeight();
 	}
 
-	makeEqual()
+	// makeEqual()
 	
-	$(window).resize(function () {
+	// $(window).resize(function () {
+	// 	makeEqual()
+	// })
+
+	let resize = false;
+	if($(window).width() > 992){
 		makeEqual()
+		resize = true;
+	}
+	
+	if (resize === true){
+		$(window).resize(function(){
+			makeEqual()
+		});	
+	}
+
+	// Parameters file script
+	$('.pfile-icon').on('click', function () {
+		$(this).parent('.sec-pgroup').find('.hidden-pfile').trigger('click')
 	})
 
+	$('.hidden-pfile').on('change', function (e) {
+		// console.log('e: ', e);
+		// console.log($(this).val());
+		let fullPath = $(this).val()
+		fullPath = fullPath.replace('C:\\fakepath\\', '')
+		$(this).parent('.sec-pgroup').find('.ptext').val(fullPath)
+	})
+		// $(this).parent('.sec-pgroup').find('.hidden-pfile').trigger('click')
 
 })
