@@ -54,8 +54,8 @@ body {
 
 .image {
 	max-width: 100%;
-	margin-bottom: var(--bs-gutter-x);
-	border-radius: 4px;
+	/* margin-bottom: var(--bs-gutter-x); */
+	/* border-radius: 4px; */
 }
 
 .accent {
@@ -435,4 +435,59 @@ body.no-home .s-main {
 }
 .sec-preset:hover {
 	background: linear-gradient(360deg, #F47560 0%, #F46060 100%);
+}
+/* State */
+.statepage h2 {
+	margin-bottom: 31px;
+}
+.sec-subtitle {
+	text-align: center;
+	font-weight: 300;
+	font-size: 14px;
+}
+/* Watch */
+.sec-wimage {
+	max-width: 557px;
+	text-align: center;
+	margin: 0 auto;
+}
+.sec-wimage img {
+ width: 100%;
+}
+.sec-wsize {
+	margin-top: 11px;
+}
+.sec-wgroup {
+	width: auto;
+}
+.sec-wgroup label {
+	font-weight: 600;
+}
+.sec-wgroup input {
+	font-size: 14px;
+}
+.sec-wbtn {
+	width: 100%;
+	margin-top: 15px;
+}
+/* Error */
+.sec-eitem {
+	margin-bottom: 50px;
+	padding-bottom: 10px;
+}
+.sec-eitem .sec-item-title {
+	margin-bottom: 16px;
+}
+.sec-eimg {
+	width: 100%;
+	height: 232px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	margin-bottom: 8px;
+}
+.sec-emessage {
+	text-align: center;
+	color: #e15f41;
+	font-weight: bold;
 }

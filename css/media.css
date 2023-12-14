@@ -273,6 +273,10 @@
 		display: flex;
 		justify-content: space-between;
 	}
+	/* State */
+	body.no-home .s-main {
+    padding-top: 110px;
+  }
 }
 
 /* sm <= Medium (md) */
@@ -323,7 +327,10 @@
 	.credits::before {
     margin-bottom: 27px;
   }
-	
+	/* Watch */
+	.sec-wimage {
+		margin-bottom: 30px;
+	}
 }
 
 /* xs <= Small (sm) */
@@ -387,6 +394,16 @@
 	.sec-preset {
 		margin-right: 0;
 		margin-bottom: 15px;
+	}
+	/* Watch */
+	.sec-wgroup {
+		width: auto;
+	}
+	/* Error */
+	.sec-eitem {
+		max-width: 300px;
+  	margin: 0 auto;
+		margin-bottom: 50px;
 	}
 }
 
