@@ -31,3 +31,6 @@ packages
 
 # Libs
 libs/
+
+# data
+data.php

@@ -119,5 +119,9 @@ $(function () {
 		$(this).parent('.sec-pgroup').find('.ptext').val(fullPath)
 	})
 		// $(this).parent('.sec-pgroup').find('.hidden-pfile').trigger('click')
+		$('.sec-preset').on('click', function (e) {
+			e.preventDefault()
+			$('.pform').trigger("reset");
+		})
 
 })
