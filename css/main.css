@@ -445,6 +445,9 @@ body.no-home .s-main {
 	font-weight: 300;
 	font-size: 14px;
 }
+.sec-state {
+	font-weight: bold;
+}
 /* Watch */
 .sec-wimage {
 	max-width: 557px;

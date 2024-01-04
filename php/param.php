@@ -1,8 +1,4 @@
 <?php
-// echo $_REQUEST['Высота'] . '<br>';
-// echo $_REQUEST['Ширина'];
-$height = $_REQUEST['Высота'];
-$width = $_REQUEST['Ширина'];
 
 include('data.php');
 

@@ -106,6 +106,24 @@ $(function () {
 		});	
 	}
 
+	// Analysis
+	let anCounter = 2
+
+	$('.sec-abtn').on('click', function () {
+		// console.log(1);
+		// $('.col-xl-4:first-child').after('.col-xl-4:last-child');
+		let firstClone = $('.sec-aitem:first').parent().clone()
+		let secondClone = $('.sec-aitem:first').parent().clone()
+
+		firstClone.find('.sec-item-title').text(`Корректная работа ${anCounter}`)
+		secondClone.find('.sec-item-title').text(`Ошибки ${anCounter}`)
+
+		firstClone.appendTo( $('.sec-aitem').closest('.row') );
+		secondClone.appendTo( $('.sec-aitem').closest('.row') );
+
+		anCounter++
+	})
+
 	// Parameters file script
 	$('.pfile-icon').on('click', function () {
 		$(this).parent('.sec-pgroup').find('.hidden-pfile').trigger('click')
@@ -123,5 +141,52 @@ $(function () {
 			e.preventDefault()
 			$('.pform').trigger("reset");
 		})
+
+		// State
+		function getState() {
+
+			if ($('body').hasClass('statepage')) {
+				// console.log(111);
+				return $.ajax({
+					type: "POST",
+					url: 'php/state.php',
+					data: {'test': 'test'},
+					dataType:'JSON', 
+					success: function(response){
+							console.log('Response from server', response.stateResponse);
+							let clearedResponse = response.stateResponse.replace(/(\r\n|\n|\r)/gm, "");
+
+							if (clearedResponse == 'good') {
+								$('.sec-state').text('Отлично')
+							} else {
+								$('.sec-state').text('Есть проблемы')
+							}
+					}
+				});
+			}
+	
+	}
+
+	let state = getState()
+	console.log('state: ', state);
+
+	// Error
+	let errCounter = 2
+
+	$('.sec-ebtn').on('click', function () {
+		// console.log(1);
+		// $('.col-xl-4:first-child').after('.col-xl-4:last-child');
+		let firstClone = $('.sec-eitem:first').parent().clone()
+		let secondClone = $('.sec-eitem:first').parent().clone()
+
+		firstClone.find('.sec-item-title').text(`Рабочее место ${errCounter}`)
+		secondClone.find('.sec-item-title').text(`Станок ${errCounter}`)
+		secondClone.find('.sec-emessage').text('Ошибка срабатывания')
+
+		firstClone.appendTo( $('.sec-eitem').closest('.row') );
+		secondClone.appendTo( $('.sec-eitem').closest('.row') );
+
+		errCounter++
+	})
 
 })
